@@ -4,7 +4,7 @@ const path = require('path');
 const { clean, getBillboard, getHNHH, getPitchfork } = require('./utils.js');
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/index1.html'));
 });
 
 app.get('/billboardQuery/:artist', (req, res) => {
