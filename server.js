@@ -4,8 +4,10 @@ const path = require('path');
 const { clean, getBillboard, getHNHH, getPitchfork } = require('./utils.js');
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/index1.html'));
+    res.sendFile(path.join(__dirname + '/prism/index.html'));
 });
+
+app.use(express.static('prism'));
 
 app.get('/billboardQuery/:artist', (req, res) => {
     const nameArr = req.params.artist.split(' ');
